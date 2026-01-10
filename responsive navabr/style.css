@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background: #f4f4f4;
+}
+
+/* Navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 15px 20px;
+}
+
+.logo{
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Links */
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover{
+  color: #00ffd5;
+}
+
+/* Hamburger */
+.hamburger{
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 📱 Mobile View */
+@media (max-width: 768px){
+  .nav-links{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .nav-links.active{
+    display: flex;
+  }
+
+  .nav-links li{
+    padding: 15px 0;
+  }
+
+  .hamburger{
+    display: block;
+  }
+}
