@@ -1,6 +1,6 @@
 let result = document.querySelector(".result-btn");
 
-result.addEventListener("click", decimal);
+result.addEventListener("click", decimal );
 
 function decimal() {
   let decimal = document.getElementById("number").value;
