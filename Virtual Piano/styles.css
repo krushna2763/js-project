@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.piano-container {
+    background: #111;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.piano {
+    display: flex;
+    position: relative;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}
+
+.white {
+    width: 60px;
+    height: 260px;
+    background: linear-gradient(#fff, #ddd);
+    border: 1px solid #999;
+    border-radius: 0 0 8px 8px;
+    margin-right: 2px;
+    padding-bottom: 10px;
+}
+
+.black {
+    width: 38px;
+    height: 160px;
+    background: linear-gradient(#000, #333);
+    position: absolute;
+    margin-left: -19px;
+    z-index: 2;
+    border-radius: 0 0 6px 6px;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+/* Position black keys */
+.black[data-note="C#"] { left: 45px; }
+.black[data-note="D#"] { left: 110px; }
+.black[data-note="F#"] { left: 230px; }
+.black[data-note="G#"] { left: 295px; }
+.black[data-note="A#"] { left: 360px; }
+
+.key.active {
+    transform: translateY(4px);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 600px) {
+    .white { width: 45px; height: 220px; }
+    .black { width: 28px; height: 130px; }
+}
