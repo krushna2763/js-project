@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 400px;
+    padding: 25px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.input-box {
+    display: grid;
+    gap: 8px;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    background: #00e5ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00c8e0;
+}
+
+.summary {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.list {
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.item {
+    background: rgba(255,255,255,0.2);
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item span {
+    font-size: 14px;
+}
+
+.delete {
+    background: red;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
